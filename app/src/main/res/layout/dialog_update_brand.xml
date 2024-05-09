@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add a new Brand"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/oldName_"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Old Brand Name"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:gravity="left"
+        android:layout_gravity="center_horizontal|left"
+        android:nextFocusDown="@+id/edtDescription"
+        android:layout_marginTop="16dp" />
+    <EditText
+        android:id="@+id/edtName_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="New Brand Name"
+        android:inputType="text"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@+id/edtDescription"
+        android:layout_marginTop="5dp" />
+
+    <ImageView
+        android:id="@+id/selected_image"
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagepreview" />
+
+    <Button
+        android:id="@+id/btnSelect_"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_camera"
+        android:text="Select Image"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnSave_"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:drawableLeft="@drawable/ic_tick"
+            android:text="Lưu"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="#4CAF50"
+            android:padding="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnCancel_"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:text="Hủy"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
