@@ -15,5 +15,5 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io'}
     }
 }
-rootProject.name = "MobileEcommerce"
+rootProject.name = "APP_MobileEcommerce"
 include ':app'

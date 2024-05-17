@@ -32,7 +32,6 @@ public class ViewPagerAdapter extends PagerAdapter {
     // Layout Inflater
     LayoutInflater mLayoutInflater;
 
-
     // Viewpager Constructor
     public ViewPagerAdapter(Context context, ProductGridModel productGridModel, LayoutInflater mLayoutInflater) {
         this.context = context;

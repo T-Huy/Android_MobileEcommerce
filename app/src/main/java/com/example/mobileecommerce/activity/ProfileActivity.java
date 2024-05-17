@@ -30,7 +30,6 @@ import com.example.mobileecommerce.model.Province;
 import com.example.mobileecommerce.model.dto.ResponseDTO;
 import com.example.mobileecommerce.model.dto.ResponseObject;
 import com.example.mobileecommerce.retrofit.RetrofitClient;
-import com.example.mobileecommerce.retrofit.RetrofitProvince;
 import com.example.mobileecommerce.sharedpreferences.SharedPreferencesManager;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -54,11 +53,9 @@ public class ProfileActivity extends AppCompatActivity {
     EditText edtPhone;
     EditText edtAddress;
 
-    Spinner spi_province;
-
-    Spinner spi_district;
-
-    Spinner spi_sub_district;
+    EditText edtProvince;
+    EditText edtDistrict;
+    EditText edtSub_district;
 
     ImageView imgAvatar;
 
@@ -70,9 +67,6 @@ public class ProfileActivity extends AppCompatActivity {
     Context context;
 
     CustomerAPI customerAPI = RetrofitClient.getRetrofit().create(CustomerAPI.class);
-    ProvinceAPI provinceAPI = RetrofitProvince.getRetrofit().create(ProvinceAPI.class);
-
-    private int codeProvince, codeDistrict, codeSubDistrict;
 
     private CustomerModel customer;
 
@@ -109,13 +103,6 @@ public class ProfileActivity extends AppCompatActivity {
                 .getInstance(getSharedPreferences("Username", MODE_PRIVATE));
         callAPIGetUserName();
 
-
-//        imageView.setOnClickListener(new View.OnClickListener() {
-//            @Override // android.view.View.OnClickListener
-//            public void onClick(View view) {
-//                ProfileActivity.this.finish();
-//            }
-//        });
         this.title.setText("My Profile");
         btnChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,147 +171,11 @@ public class ProfileActivity extends AppCompatActivity {
         edtFullname = findViewById(R.id.edt_fullname);
         edtAddress = findViewById(R.id.edt_address);
         edtPhone = findViewById(R.id.edt_sodienthoai);
-        spi_province = findViewById(R.id.spi_province);
-        spi_district = findViewById(R.id.spi_district);
-        spi_sub_district = findViewById(R.id.spi_subdistrict);
+        edtProvince = findViewById(R.id.edt_province);
+        edtDistrict = findViewById(R.id.edt_district);
+        edtSub_district = findViewById(R.id.edt_subdistrict);
         imgAvatar = findViewById(R.id.profileImage);
         btnLogout = findViewById(R.id.btn_logout_profile);
-    }
-
-    private void getProvince(Context context) {
-        provinceAPI.getProvince().enqueue(new Callback<List<Province>>() {
-            @Override
-            public void onResponse(Call<List<Province>> call, Response<List<Province>> response) {
-                List<Province> listProvince = response.body();
-                ArrayAdapter<Province> adapter = new ArrayAdapter<Province>(context, android.R.layout.simple_spinner_item, listProvince);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spi_province.setAdapter(adapter);
-                System.out.println(customer);
-//                 Selected Spinner dua vao code province
-
-                spi_province.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        Province selectedProvinceDTO = (Province) adapterView.getItemAtPosition(i);
-                        codeProvince = selectedProvinceDTO.getCode();
-                        getDistrict(context, selectedProvinceDTO.getCode());
-                    }
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
-
-                int codeProvinceValue = customer.getCodeProvince();
-                // Selected vào Spinner dựa vào code province;
-
-                int position = -1;
-                for(int i = 0; i < listProvince.size(); i++) {
-                    if(listProvince.get(i).getCode() == codeProvinceValue) {
-                        position = i;
-                        break;
-                    }
-                }
-                if(position != -1) {
-                    spi_province.setSelection(position);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Province>> call, Throwable t) {
-                Toast.makeText(ProfileActivity.this, "Hình ảnh không phù hợp", Toast.LENGTH_SHORT).show();
-                progressDialog.dismiss();
-            }
-        });
-    }
-
-    private void getDistrict(Context context, Integer code) {
-        provinceAPI.getDistricts(code).enqueue(new Callback<JsonObject>() {
-            @Override
-            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                JsonObject jsonObject = response.body();
-                List<Province> listDistrict = new Gson().fromJson(jsonObject.get("districts"), new TypeToken<List<Province>>(){}.getType());
-                ArrayAdapter<Province> adapter = new ArrayAdapter<Province>(context, android.R.layout.simple_spinner_item, listDistrict);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spi_district.setAdapter(adapter);
-                spi_district.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        Province selectedDistrict = (Province) adapterView.getItemAtPosition(i);
-                        System.out.println(selectedDistrict.getCode() + " " + selectedDistrict.getName());
-                        codeDistrict = selectedDistrict.getCode();
-                        getSubDistrict(context, selectedDistrict.getCode());
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
-
-                int codeDistrictValue = customer.getCodeDistrict();
-                // Selected vào Spinner dựa vào code province;
-
-                int position = -1;
-                for(int i = 0; i < listDistrict.size(); i++) {
-                    if(listDistrict.get(i).getCode() == codeDistrictValue) {
-                        position = i;
-                        break;
-                    }
-                }
-                if(position != -1) {
-                    spi_district.setSelection(position);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<JsonObject> call, Throwable t) {
-
-            }
-        });
-    }
-
-    private void getSubDistrict(Context context, Integer code) {
-        provinceAPI.getSubDistricts(code).enqueue(new Callback<JsonObject>() {
-            @Override
-            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                JsonObject jsonObject = response.body();
-                List<Province> listSubDistrict = new Gson().fromJson(jsonObject.get("wards"), new TypeToken<List<Province>>(){}.getType());
-                ArrayAdapter<Province> adapter = new ArrayAdapter<Province>(context, android.R.layout.simple_spinner_item, listSubDistrict);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spi_sub_district.setAdapter(adapter);
-                spi_sub_district.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        Province selectedSubDistict = (Province) adapterView.getItemAtPosition(i);
-                        codeSubDistrict = selectedSubDistict.getCode();
-                        System.out.println(selectedSubDistict.getCode() + " " + selectedSubDistict.getName());
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
-
-                int codeSubDistrictValue = customer.getCodeSubDistrict();
-                int position = -1;
-                for(int i = 0; i < listSubDistrict.size(); i++) {
-                    if(listSubDistrict.get(i).getCode() == codeSubDistrictValue) {
-                        position = i;
-                        break;
-                    }
-                }
-                if(position != -1) {
-                    spi_sub_district.setSelection(position);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<JsonObject> call, Throwable t) {
-
-            }
-        });
     }
 
     private void callAPI(String username) {
@@ -339,8 +190,9 @@ public class ProfileActivity extends AppCompatActivity {
                     edtFullname.setText(customer.getFullname());
                     edtPhone.setText(customer.getPhonenumber());
                     edtAddress.setText(customer.getAddress());
-
-                    getProvince(context);
+                    edtProvince.setText(customer.getProvince());
+                    edtDistrict.setText(customer.getDistrict());
+                    edtSub_district.setText(customer.getSubdistrict());
                 }
                 else {
                     customer = new CustomerModel();
@@ -381,9 +233,9 @@ public class ProfileActivity extends AppCompatActivity {
         customer.setUserName(tvUsername.getText().toString());
         customer.setFullname(edtFullname.getText().toString());
         customer.setPhonenumber(edtPhone.getText().toString());
-        customer.setCodeDistrict(codeDistrict);
-        customer.setCodeProvince(codeProvince);
-        customer.setCodeSubDistrict(codeSubDistrict);
+        customer.setProvince(edtProvince.getText().toString());
+        customer.setDistrict(edtDistrict.getText().toString());
+        customer.setSubdistrict(edtSub_district.getText().toString());
         customerAPI.updateCustomer(customer).enqueue(new Callback<ResponseObject>() {
             @Override
             public void onResponse(Call<ResponseObject> call, Response<ResponseObject> response) {
