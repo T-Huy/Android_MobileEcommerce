@@ -174,13 +174,20 @@
             android:textSize="18dp"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/spi_province"
-            android:layout_width="266dp"
+        <EditText
+            android:id="@+id/edt_province"
+            android:layout_width="290dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="25dp"
-            android:textColor="@color/gray"
+            android:textColor="@color/black"
             android:textSize="18dp" />
+<!--        <Spinner-->
+<!--            android:id="@+id/spi_province"-->
+<!--            android:layout_width="266dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginLeft="25dp"-->
+<!--            android:textColor="@color/gray"-->
+<!--            android:textSize="18dp" />-->
     </LinearLayout>
 
 
@@ -207,13 +214,20 @@
             android:textSize="18dp"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/spi_district"
+        <EditText
+            android:id="@+id/edt_district"
             android:layout_width="290dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="25dp"
-            android:textColor="@color/gray"
+            android:textColor="@color/black"
             android:textSize="18dp" />
+<!--        <Spinner-->
+<!--            android:id="@+id/spi_district"-->
+<!--            android:layout_width="290dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginLeft="25dp"-->
+<!--            android:textColor="@color/gray"-->
+<!--            android:textSize="18dp" />-->
     </LinearLayout>
 
     <LinearLayout
@@ -239,13 +253,20 @@
             android:textSize="18dp"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/spi_subdistrict"
-            android:layout_width="255dp"
+        <EditText
+            android:id="@+id/edt_subdistrict"
+            android:layout_width="290dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="25dp"
-            android:textColor="@color/gray"
+            android:textColor="@color/black"
             android:textSize="18dp" />
+<!--        <Spinner-->
+<!--            android:id="@+id/spi_subdistrict"-->
+<!--            android:layout_width="255dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginLeft="25dp"-->
+<!--            android:textColor="@color/gray"-->
+<!--            android:textSize="18dp" />-->
     </LinearLayout>
 
     <View

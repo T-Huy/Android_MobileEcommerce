@@ -10,6 +10,7 @@ public class RetrofitForLogin {
     private static Retrofit retrofit = null;
     static Gson gson = new GsonBuilder().setDateFormat("yyyy MM dd HH:mm:ss").create();
     private static final String BASE_URL = "http://192.168.1.4:8088";
+
     public static Retrofit getRetrofitForLogin() {
         if(retrofit == null) {
             retrofit = new Retrofit.Builder()
