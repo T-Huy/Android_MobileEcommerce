@@ -89,6 +89,12 @@
             android:exported="false" />
         <activity android:name=".activity.ShipOrderActivity"
             android:exported="false" />
+
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
         <activity
             android:name=".activity.SplashScreenActivity"
             android:exported="true">
@@ -98,6 +104,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
