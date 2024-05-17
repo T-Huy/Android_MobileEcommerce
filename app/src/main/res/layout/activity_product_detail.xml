@@ -55,17 +55,18 @@
                     android:id="@+id/tvName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Rs. 1450"
+                    android:fontFamily="@font/lexend"
+                    android:text="@string/rs_2500"
+                    android:textColor="@color/txt_color"
                     android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/txt_color" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/lexend"
                     android:text="@string/rs_2500"
                     android:textColor="#7c7b7b"
                     android:textSize="14sp" />
@@ -75,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:background="@drawable/offer_red_rect"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/lexend"
                     android:paddingLeft="4dp"
                     android:paddingTop="2dp"
                     android:paddingRight="4dp"
@@ -105,9 +106,9 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="15dp"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/lexend"
                 android:lineSpacingExtra="3dp"
-                android:text="Lorem Ipsum is simply dummy text of the prnting and typesetting industry.Lorem Ipsum is simply dummy text of the prnting and typesetting industry.Lorem Ipsum is simply dummy text of the prnting and typesetting industry."
+                android:text="iPhone 15 Pro Max thiết kế mới với chất liệu titan chuẩn hàng không vũ trụ bền bỉ, trọng lượng nhẹ, đồng thời trang bị nút Action và cổng sạc USB-C tiêu chuẩn giúp nâng cao tốc độ sạc. Khả năng chụp ảnh đỉnh cao của iPhone 15 bản Pro Max đến từ camera chính 48MP, camera UltraWide 12MP và camera telephoto có khả năng zoom quang học đến 5x. Bên cạnh đó, iPhone 15 ProMax sử dụng chip A17 Pro mới mạnh mẽ"
                 android:textColor="#8f909e"
                 android:textSize="12sp" />
 
@@ -125,15 +126,15 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/btn_red_rect"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/lexend"
                     android:gravity="center_vertical|center_horizontal"
                     android:paddingLeft="15sp"
                     android:paddingRight="15sp"
                     android:text="Add To Cart"
-                    android:textStyle="bold"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="45dp"
@@ -165,9 +166,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
+                    android:fontFamily="@font/lexend"
                     android:text="Option"
-                    android:textColor="@color/txt_color"
+                    android:textColor="@color/black"
                     android:textSize="15sp" />
 
                 <LinearLayout
@@ -197,7 +198,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Reviews"
+                    android:text="Đánh giá"
                     android:textColor="@color/txt_color"
                     android:textSize="15sp" />
 

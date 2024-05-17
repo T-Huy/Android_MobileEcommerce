@@ -20,14 +20,15 @@
             android:layout_marginTop="90dp"
             android:src="@drawable/recived"
             android:id="@+id/img_send_otp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="OTP verification"
-            android:textSize="20sp"
+            android:text="Xác nhận OTP"
             android:textColor="@color/colortextfirst"
-            android:textStyle="bold"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -37,9 +38,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="50dp"
             android:gravity="center"
-            android:textSize="14sp"
-            android:text="Please enter OTP sent to your E-MAIL"
-            android:textColor="@color/colortextsecond"/>
+            android:text="Nhập OTP được gửi về e-mail của bạn"
+            android:textColor="@color/colortextsecond"
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -181,20 +182,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Did't recive OTP ?"
-                android:textSize="14sp"
+                android:text="Không nhận được OTP ?"
                 android:textColor="@color/colortextsecond"
-                />
+                android:textSize="14sp" />
+
             <TextView
+                android:id="@+id/sendotp_again"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Send OTP again"
-                android:textColor="@color/colortextfirst"
-                android:textStyle="bold"
-                android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Gửi lại"
+                android:textColor="@color/colortextfirst"
                 android:textSize="15sp"
-                android:id="@+id/sendotp_again"/>
+                android:textStyle="bold" />
 
 
 
@@ -206,15 +207,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
+
             <Button
+                android:id="@+id/btnsubmit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Verify"
-                android:id="@+id/btnsubmit"
                 android:layout_margin="30dp"
-                android:background="@drawable/backgroundbutton"
+                android:background="#000000"
+                android:backgroundTint="#000000"
+                android:text="Verify"
                 android:textColor="@color/white"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <ProgressBar
                 android:layout_width="35dp"

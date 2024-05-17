@@ -7,17 +7,19 @@
     <include layout="@layout/toolbar_product_list"/>
     <LinearLayout android:orientation="horizontal" android:background="@drawable/white_home_rect" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
         <ImageView android:id="@+id/img_click_search" android:layout_gravity="center" android:layout_width="18dp" android:layout_height="18dp" android:layout_marginLeft="8dp" android:src="@drawable/ic_search"/>
+
         <EditText
-            android:textSize="15sp"
             android:id="@+id/edit_txt_search"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/transperent"
+            android:fontFamily="@font/lexend"
+            android:hint="Tìm kiếm..."
+            android:inputType="text"
             android:padding="10sp"
-            android:hint="Searching..."
-            android:textColor="@color/txt_color" android:inputType="text"
-            android:fontFamily="@font/roboto_regular"/>
+            android:textColor="@color/txt_color"
+            android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -29,7 +31,8 @@
                 android:id="@+id/btn_show_filter_product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Filter"
+                android:fontFamily="@font/lexend"
+                android:text="Tìm kiếm"
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />
 
