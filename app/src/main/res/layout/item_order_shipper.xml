@@ -30,11 +30,11 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Order No : "
+                    android:fontFamily="@font/lexend"
+                    android:text="Mã đặt hàng : "
                     android:textColor="@color/red"
-                    android:textStyle="bold"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_order_no"
@@ -56,11 +56,11 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Total Price : "
+                    android:fontFamily="@font/lexend"
+                    android:text="Tổng tiền : "
                     android:textColor="@color/red"
-                    android:textStyle="bold"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_total_price"
@@ -68,10 +68,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="$10000"
+                    android:text="10000"
                     android:textColor="@color/colorAccent"
-                    android:textStyle="bold"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <!--<LinearLayout
@@ -108,11 +108,11 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Customer : "
-                    android:textStyle="bold"
+                    android:fontFamily="@font/lexend"
+                    android:text="Khách hàng : "
                     android:textColor="@color/red"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_customer"
@@ -134,11 +134,11 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Address : "
-                    android:textStyle="bold"
+                    android:fontFamily="@font/lexend"
+                    android:text="Địa chỉ : "
                     android:textColor="@color/red"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_address"
@@ -159,11 +159,11 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Order Date : "
-                    android:textStyle="bold"
+                    android:fontFamily="@font/lexend"
+                    android:text="Ngày đặt hàng : "
                     android:textColor="@color/red"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_order_date"
@@ -189,9 +189,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:backgroundTint="#FF5722"
+                android:backgroundTint="@color/black"
+                android:drawableLeft="@drawable/ic_supermarket"
                 android:text="Nhận"
-                android:drawableLeft="@drawable/ic_transit"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -201,8 +201,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:backgroundTint="#4CAF50"
-                android:drawableLeft="@drawable/ic_gift"
+                android:backgroundTint="@color/black"
+                android:drawableLeft="@drawable/ic_picking"
                 android:text="Đã giao"
                 android:textColor="@color/white"
                 android:textSize="12sp"

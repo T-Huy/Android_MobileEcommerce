@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -8,33 +9,34 @@
         android:id="@+id/dialog_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add a new Brand"
+        android:gravity="center"
+        android:text="Thêm thương hiệu mới"
         android:textSize="22sp"
-        android:textStyle="bold"
-        android:gravity="center" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/oldName_"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:hint="Old Brand Name"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorAccent"
-        android:gravity="left"
         android:layout_gravity="center_horizontal|left"
+        android:layout_marginTop="16dp"
+        android:gravity="left"
+        android:hint="Tên thương hiệu"
         android:nextFocusDown="@+id/edtDescription"
-        android:layout_marginTop="16dp" />
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
     <EditText
         android:id="@+id/edtName_"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="New Brand Name"
+        android:layout_marginTop="5dp"
+        android:hint="Tên thương hiệu mới"
+        android:imeOptions="actionNext"
         android:inputType="text"
         android:maxLines="1"
-        android:imeOptions="actionNext"
-        android:nextFocusDown="@+id/edtDescription"
-        android:layout_marginTop="5dp" />
+        android:nextFocusDown="@+id/edtDescription" />
 
     <ImageView
         android:id="@+id/selected_image"
@@ -48,12 +50,13 @@
 
     <Button
         android:id="@+id/btnSelect_"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
         android:drawableLeft="@drawable/icon_camera"
-        android:text="Select Image"
-        android:layout_marginTop="8dp"/>
+        android:text="Chọn ảnh" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -66,23 +69,23 @@
             android:id="@+id/btnSave_"
             android:layout_width="wrap_content"
             android:layout_height="52dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/black"
             android:drawableLeft="@drawable/ic_tick"
-            android:text="Lưu"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:backgroundTint="#4CAF50"
             android:padding="8dp"
-            android:layout_marginEnd="8dp" />
+            android:text="Lưu"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnCancel_"
             android:layout_width="wrap_content"
             android:layout_height="52dp"
+            android:backgroundTint="@color/black"
+            android:padding="8dp"
             android:text="Hủy"
-            android:textStyle="bold"
             android:textColor="@color/white"
-            android:backgroundTint="@color/red"
-            android:padding="8dp" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 

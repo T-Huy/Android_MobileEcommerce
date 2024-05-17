@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:fontFamily="@font/roboto_regular"
+            android:fontFamily="@font/lexend"
             android:text="Headphone"
             android:textColor="@color/red"
             android:textSize="13sp" />
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/lexend"
                 android:text="Rs 500"
                 android:textColor="@color/txt_color"
                 android:textSize="12sp" />
