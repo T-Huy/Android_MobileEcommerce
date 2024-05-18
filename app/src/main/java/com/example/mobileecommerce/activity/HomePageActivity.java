@@ -34,7 +34,6 @@ import com.example.mobileecommerce.model.ProductGridModel;
 import com.example.mobileecommerce.model.UserModel;
 import com.example.mobileecommerce.model.dto.ResponseDTO;
 import com.example.mobileecommerce.retrofit.RetrofitClient;
-import com.example.mobileecommerce.retrofit.RetrofitProvince;
 import com.example.mobileecommerce.service.JwtService;
 import com.example.mobileecommerce.sharedpreferences.SharedPreferencesManager;
 import com.google.android.material.navigation.NavigationView;
