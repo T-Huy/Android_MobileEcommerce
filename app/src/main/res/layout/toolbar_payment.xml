@@ -17,7 +17,7 @@
         android:layout_gravity="center"
         android:layout_marginLeft="-20dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Payment"
+        android:text="Thanh Toán"
         android:textColor="@color/white"
         android:textSize="16sp" />
 

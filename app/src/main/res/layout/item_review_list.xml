@@ -44,22 +44,22 @@
 
             <Button
                 android:id="@+id/btn_edit_review"
-                android:layout_width="65dp"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:backgroundTint="@color/black"
                 android:fontFamily="@font/lexend"
-                android:text="Edit"
+                android:text="Chỉnh sửa"
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btn_remove_review"
-                android:layout_width="95dp"
+                android:layout_width="76dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="15dp"
                 android:backgroundTint="@color/black"
                 android:fontFamily="@font/lexend"
-                android:text="Remove"
+                android:text="Xóa"
                 android:textSize="11sp"
                 android:textStyle="bold" />
         </LinearLayout>
