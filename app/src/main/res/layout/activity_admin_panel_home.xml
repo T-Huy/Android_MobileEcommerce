@@ -165,9 +165,9 @@
                         android:drawablePadding="10dp"
                         android:fontFamily="@font/lexend"
                         android:gravity="center_vertical|left"
-                        android:text="Số lượng người dùng"
+                        android:text="Người dùng đăng kí mới trong tháng"
                         android:textColor="@color/white"
-                        android:textSize="15sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -197,9 +197,9 @@
                         android:drawablePadding="10dp"
                         android:fontFamily="@font/lexend"
                         android:gravity="center_vertical|left"
-                        android:text="Số lượng sản phẩm"
+                        android:text="Sản phẩm được thêm trong tháng"
                         android:textColor="@color/white"
-                        android:textSize="15sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -228,9 +228,9 @@
                         android:drawablePadding="10dp"
                         android:fontFamily="@font/lexend"
                         android:gravity="center_vertical|left"
-                        android:text="Tổng doanh thu"
+                        android:text="Tổng doanh thu trong tháng"
                         android:textColor="@color/white"
-                        android:textSize="15sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -259,14 +259,14 @@
                         android:drawablePadding="10dp"
                         android:fontFamily="@font/lexend"
                         android:gravity="center_vertical|left"
-                        android:text="Số lượng đánh giá"
+                        android:text="Số lượng đánh giá trong tháng"
                         android:textColor="@color/white"
-                        android:textSize="15sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/review_quantity_textview"
-                        android:layout_width="100dp"
+                        android:layout_width="73dp"
                         android:layout_height="30dp"
                         android:layout_marginStart="1dp"
                         android:background="#20CDDC39"
