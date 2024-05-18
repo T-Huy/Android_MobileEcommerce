@@ -64,8 +64,7 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
     @Override // androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        pres = SharedPreferencesManager
-                .getInstance(getSharedPreferences("jwt", MODE_PRIVATE));
+        pres = SharedPreferencesManager.getInstance(getSharedPreferences("jwt", MODE_PRIVATE));
 //        checkJWT();
         this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_home_page);
@@ -88,7 +87,6 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
             }
-
             @Override
             public void onDrawerOpened(View view) {
                 super.onDrawerOpened(view);

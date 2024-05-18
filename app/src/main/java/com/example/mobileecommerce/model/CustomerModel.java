@@ -11,24 +11,24 @@ public class CustomerModel {
 
     private String phonenumber;
 
-    private Integer codeProvince;
+    private String province;
 
-    private Integer codeDistrict;
+    private String district;
 
-    private Integer codeSubDistrict;
+    private String subdistrict;
 
     public CustomerModel() {
     }
 
-    public CustomerModel(String userName, String address, String avatar, String fullname, String phonenumber, Integer codeProvince, Integer codeDistrict, Integer codeSubDistrict) {
+    public CustomerModel(String userName, String address, String avatar, String fullname, String phonenumber, String province, String district, String subdistrict) {
         this.userName = userName;
         this.address = address;
         this.avatar = avatar;
         this.fullname = fullname;
         this.phonenumber = phonenumber;
-        this.codeProvince = codeProvince;
-        this.codeDistrict = codeDistrict;
-        this.codeSubDistrict = codeSubDistrict;
+        this.province = province;
+        this.district = district;
+        this.subdistrict = subdistrict;
     }
 
     public CustomerModel(String string) {
@@ -75,28 +75,28 @@ public class CustomerModel {
         this.phonenumber = phonenumber;
     }
 
-    public Integer getCodeProvince() {
-        return codeProvince;
+    public String getProvince() {
+        return province;
     }
 
-    public void setCodeProvince(Integer codeProvince) {
-        this.codeProvince = codeProvince;
+    public void setProvince(String province) {
+        this.province = province;
     }
 
-    public Integer getCodeDistrict() {
-        return codeDistrict;
+    public String getDistrict() {
+        return district;
     }
 
-    public void setCodeDistrict(Integer codeDistrict) {
-        this.codeDistrict = codeDistrict;
+    public void setDistrict(String district) {
+        this.district = district;
     }
 
-    public Integer getCodeSubDistrict() {
-        return codeSubDistrict;
+    public String getSubdistrict() {
+        return subdistrict;
     }
 
-    public void setCodeSubDistrict(Integer codeSubDistrict) {
-        this.codeSubDistrict = codeSubDistrict;
+    public void setSubdistrict(String subdistrict) {
+        this.subdistrict = subdistrict;
     }
 
     @Override
@@ -107,9 +107,9 @@ public class CustomerModel {
                 ", avatar='" + avatar + '\'' +
                 ", fullname='" + fullname + '\'' +
                 ", phonenumber='" + phonenumber + '\'' +
-                ", codeProvince=" + codeProvince +
-                ", codeDistrict=" + codeDistrict +
-                ", codeSubDistrict=" + codeSubDistrict +
+                ", province=" + province +
+                ", district=" + district +
+                ", subdistrict=" + subdistrict +
                 '}';
     }
 }

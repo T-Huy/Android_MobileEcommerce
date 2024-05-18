@@ -13,12 +13,12 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="APP_MobileEcommerce"
         android:preserveLegacyExternalStorage="true"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MobileEcommerce"
+        android:theme="@style/Theme.APP_MobileEcommerce"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
@@ -37,25 +37,16 @@
             android:name=".activity.BrandsListActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ProductListActivity"
+            android:name=".activity.HomePageActivity"
             android:exported="false" />
         <activity
             android:name=".activity.ProductGridActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.SplashScreenActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".activity.ProductDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.HomePageActivity"
+            android:name=".activity.ProductListActivity"
             android:exported="false" />
         <activity
             android:name=".activity.OTPVerifyActivity"
@@ -99,9 +90,21 @@
         <activity android:name=".activity.ShipOrderActivity"
             android:exported="false" />
 
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
