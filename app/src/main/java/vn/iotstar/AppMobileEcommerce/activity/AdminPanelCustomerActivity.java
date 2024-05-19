@@ -55,6 +55,7 @@ public class AdminPanelCustomerActivity extends AppCompatActivity {
 //        recyclerview.setAdapter(mAdapter2);
         title = findViewById(R.id.title);
         this.title.setText("Quản lý người dùng");
+
         ivback = (ImageView) findViewById(R.id.iv_back);
         ivback.setOnClickListener(new View.OnClickListener() {
             @Override
