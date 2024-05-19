@@ -125,12 +125,12 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_red_rect"
+                    android:background="@drawable/blackbg"
                     android:fontFamily="@font/lexend"
                     android:gravity="center_vertical|center_horizontal"
                     android:paddingLeft="15sp"
                     android:paddingRight="15sp"
-                    android:text="Add To Cart"
+                    android:text="Thêm vào giỏ hàng"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="14sp"
@@ -148,7 +148,6 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/favorite"
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_gravity="center"
@@ -168,7 +167,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lexend"
-                    android:text="Option"
+                    android:text="Lựa chọn"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -188,7 +187,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/rating_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -197,7 +195,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/rating_com"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
@@ -221,6 +218,7 @@
                 <!--                        android:fontFamily="@font/roboto_regular"-->
                 <!--                        />-->
                 <!--                </LinearLayout>-->
+
 
 
                 <androidx.recyclerview.widget.RecyclerView

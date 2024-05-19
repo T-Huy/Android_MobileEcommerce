@@ -43,6 +43,7 @@
                         android:layout_gravity="center"
                         android:backgroundTint="@color/black"
                         android:backgroundTintMode="add"
+                        android:fontFamily="@font/lexend"
                         android:text="Thêm"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"

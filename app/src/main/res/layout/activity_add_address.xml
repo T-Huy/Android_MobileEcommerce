@@ -170,7 +170,7 @@
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
         android:padding="15dp"
-        android:text="Save"
+        android:text="Lưu"
         android:textColor="@color/white"
         android:textSize="15sp" />
 </RelativeLayout>
