@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="@font/lexend"
-        android:text="Product List"
+        android:text="Quản lý"
         android:textColor="@color/white"
         android:textSize="16sp" />
 </androidx.appcompat.widget.Toolbar>

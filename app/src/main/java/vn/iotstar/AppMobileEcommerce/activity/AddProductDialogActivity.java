@@ -67,7 +67,7 @@ public class AddProductDialogActivity extends AppCompatActivity {
             }
         });
 
-        edtProductName = findViewById(R.id.edtName_);
+        edtProductName = findViewById(R.id.fullname);
         edtDescri = findViewById(R.id.edtDescri);
         edtBranId = findViewById(R.id.edtBrandId);
 

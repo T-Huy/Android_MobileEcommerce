@@ -111,6 +111,7 @@
                         android:gravity="center_horizontal">
 
                         <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/customer_manage"
                             android:layout_width="96dp"
                             android:layout_height="96dp"
                             android:background="#000000"
