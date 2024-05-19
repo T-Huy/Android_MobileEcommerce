@@ -99,9 +99,10 @@
             android:exported="false" />
         <activity android:name=".activity.AddCustomerDialogActivity"
             android:exported="false" />
-        <activity android:name=".activity.AdminCustomerDetailActivity"
-            android:exported="false" />
+
         <activity android:name=".activity.EditCustomerDialogActivity"
+            android:exported="false" />
+        <activity android:name=".activity.AdminProductDetailActivity"
             android:exported="false" />
 
         <meta-data

@@ -1,9 +1,12 @@
 package vn.iotstar.AppMobileEcommerce.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +34,7 @@ public class AdminPanelProductActivity extends AppCompatActivity {
     RecyclerView recyclerview;
     TextView title;
     BrandAPI brandAPI;
+    ImageView iv_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +44,20 @@ public class AdminPanelProductActivity extends AppCompatActivity {
 
 
         title = (TextView) findViewById(R.id.title);
-        this.title.setText("Brand Management");
+        this.title.setText("Danh sách thương hiệu");
 
         recyclerview = (RecyclerView) findViewById(R.id.recyclerViewUser);
-
+        iv_back = (ImageView) findViewById(R.id.iv_back);
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnAdd.setVisibility(View.GONE);
+
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminPanelProductActivity.this, AdminPanelHomeActivity.class);
+                startActivity(intent);
+            }
+        });
 
         brandsModels = new ArrayList<>();
         GetBrands();

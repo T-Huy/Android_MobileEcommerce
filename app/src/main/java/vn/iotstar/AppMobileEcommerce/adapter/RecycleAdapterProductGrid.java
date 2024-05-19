@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import vn.iotstar.AppMobileEcommerce.R;
+import vn.iotstar.AppMobileEcommerce.activity.AdminProductDetailActivity;
 import vn.iotstar.AppMobileEcommerce.activity.ProductDetailActivity;
 import vn.iotstar.AppMobileEcommerce.model.ProductGridModel;
 
@@ -50,7 +51,7 @@ public class RecycleAdapterProductGrid extends RecyclerView.Adapter<RecycleAdapt
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(holder.itemView.getContext(), ProductDetailActivity.class);
+                Intent intent = new Intent(holder.itemView.getContext(), AdminProductDetailActivity.class);
                 intent.putExtra("product", productList.get(id));
                 holder.itemView.getContext().startActivity(intent);
             }
