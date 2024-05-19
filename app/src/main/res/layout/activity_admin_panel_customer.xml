@@ -9,6 +9,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <include layout="@layout/toolbar_product_list"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewUser"
             android:layout_width="match_parent"
