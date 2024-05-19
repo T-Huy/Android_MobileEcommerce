@@ -74,9 +74,9 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
 
     CustomerAPI customerAPI = RetrofitClient.getRetrofit().create(CustomerAPI.class);
 
-    private String[] title2 = {"Home", "Cart", "My Orders", "Brands", "Offers", "My Account"};
+    private String[] title2 = {"Trang Chủ", "Giỏ Hàng", "Đơn Hàng", "Thương Hiệu", "Ưu Đãi", "Thông Tin"};
 
-    private int[] image2 = {R.drawable.home_, R.drawable.cart_, R.drawable.order, R.drawable.category, R.drawable.offer, R.drawable.profile_};
+    private int[] image2 = {R.drawable.home_, R.drawable.cart_, R.drawable.shoppingbag, R.drawable.category, R.drawable.offer, R.drawable.profile_};
     private Toolbar toolbar;
     SharedPreferencesManager pres;
     ImageView ecart;

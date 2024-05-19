@@ -50,7 +50,7 @@
                             android:id="@+id/tv_pGrid_title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_medium"
+                            android:fontFamily="@font/lexend"
                             android:text="Samsung Galaxy S9 Plus (Midnight Black, 128GB)"
                             android:textColor="@color/txt_color"
                             android:textSize="11.7sp" />
@@ -65,7 +65,7 @@
                                 android:id="@+id/tv_pGrid_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_bold"
+                                android:fontFamily="@font/lexend"
                                 android:text=" 49,999"
                                 android:textColor="@color/txt_color"
                                 android:textSize="13.3sp" />
