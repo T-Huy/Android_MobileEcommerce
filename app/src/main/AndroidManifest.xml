@@ -95,6 +95,14 @@
             android:exported="false" />
         <activity android:name=".activity.AddProductDialogActivity"
             android:exported="false" />
+        <activity android:name=".activity.AdminPanelCustomerActivity"
+            android:exported="false" />
+        <activity android:name=".activity.AddCustomerDialogActivity"
+            android:exported="false" />
+        <activity android:name=".activity.AdminCustomerDetailActivity"
+            android:exported="false" />
+        <activity android:name=".activity.EditCustomerDialogActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

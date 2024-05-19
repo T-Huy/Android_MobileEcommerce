@@ -14,7 +14,7 @@
         android:gravity="center" />
 
     <TextView
-        android:id="@+id/oldName_"
+        android:id="@+id/user_name"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="Old Brand Name"
@@ -26,7 +26,7 @@
         android:nextFocusDown="@+id/edtDescription"
         android:layout_marginTop="16dp" />
     <EditText
-        android:id="@+id/edtName_"
+        android:id="@+id/fullname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="New Brand Name"
