@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -40,17 +41,17 @@ public class EditCustomerDialogActivity extends AppCompatActivity {
     private TextView title_;
     private Button btnSelectImage, btnSaveCustomer, btnCancel;
     private ImageView imgView;
-    private EditText edtusername;
-    private EditText edtfullname;
-    private EditText edtaddress;
-    private EditText edtphone;
+    private EditText edtUsername;
+    private EditText edtFullname;
+    private EditText edtAddress;
+    private EditText edtPhone;
     private Uri imgUrl;
     private Uri mUri;
     private String user_name;
     private String email;
     private static final int REQUEST_CODE_READ_EXTERNAL_STORAGE = 9;
     private static final int PICK_IMAGE_REQUEST = 10;
-    private CustomerAPI customerAPI;
+    private CustomerAPI customerAPI = RetrofitClient.getRetrofit().create(CustomerAPI.class);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +59,6 @@ public class EditCustomerDialogActivity extends AppCompatActivity {
 
         this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.dialog_admin_update_customer);
-
-        customerAPI = RetrofitClient.getRetrofit().create(CustomerAPI.class);
 
         imgView = findViewById(R.id.selected_image);
 
@@ -72,10 +71,10 @@ public class EditCustomerDialogActivity extends AppCompatActivity {
         });
 
         title_ = findViewById(R.id.dialog_title);
-        edtusername = findViewById(R.id.username);
-        edtfullname = findViewById(R.id.fullname);
-        edtaddress = findViewById(R.id.address);
-        edtphone = findViewById(R.id.phonenumber);
+        edtUsername = findViewById(R.id.username);
+        edtFullname = findViewById(R.id.fullname);
+        edtAddress = findViewById(R.id.address);
+        edtPhone = findViewById(R.id.phonenumber);
 
         btnSaveCustomer = findViewById(R.id.btnSave_);
         btnCancel = findViewById(R.id.btnCancel_);
@@ -86,41 +85,9 @@ public class EditCustomerDialogActivity extends AppCompatActivity {
         Intent intent = getIntent();
         user_name = intent.getStringExtra("user_name");
         email = intent.getStringExtra("email");
-        customerAPI = RetrofitClient.getRetrofit().create(CustomerAPI.class);
-        customerAPI.getCustomerInfor(user_name).enqueue(new Callback<ResponseObject>() {
-            @Override
-            public void onResponse(Call<ResponseObject> call, Response<ResponseObject> response) {
-                if (response.isSuccessful()) {
-                    ResponseObject responseObject = response.body();
-                    if (responseObject != null && responseObject.getStatus().equals("Success")) {
-                        CustomerModel customer = (CustomerModel) responseObject.getData();
-                        // Gán thông tin của khách hàng vào các EditText
 
-                        edtusername.setText(customer.getUserName());
-                        edtfullname.setText(customer.getFullname());
-                        edtaddress.setText(customer.getAddress());
-                        edtphone.setText(customer.getPhonenumber());
-                        if (customer.getAvatar() != null && !customer.getAvatar().isEmpty()) {
-                            Picasso.get().load(customer.getAvatar()).into(imgView);
-                        }
-                    } else {
-                        // Xử lý khi không thành công
-                        Toast.makeText(EditCustomerDialogActivity.this, responseObject.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    // Xử lý khi không thành công
-                    Toast.makeText(EditCustomerDialogActivity.this, "Không thành công: " + response.message(), Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseObject> call, Throwable t) {
-                // Xử lý khi gặp lỗi kết nối
-                Toast.makeText(EditCustomerDialogActivity.this, "Lỗi kết nối: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
+        Toast.makeText(EditCustomerDialogActivity.this, user_name, Toast.LENGTH_SHORT).show();
+        GetCustmerInforAPI();
 
         btnSaveCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,6 +102,33 @@ public class EditCustomerDialogActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void GetCustmerInforAPI() {
+        customerAPI.getCustomerInfor(user_name).enqueue(new Callback<ResponseObject>() {
+            @Override
+            public void onResponse(Call<ResponseObject> call, Response<ResponseObject> response) {
+                if(response.isSuccessful()) {
+                    Gson gson = new Gson();
+                    String json = gson.toJson(response.body().getData());
+                    customerModel = gson.fromJson(json, CustomerModel.class);
+                    edtUsername.setText(customerModel.getUserName());
+                    edtFullname.setText(customerModel.getFullname());
+                    edtPhone.setText(customerModel.getPhonenumber());
+                    edtAddress.setText(customerModel.getAddress());
+                }
+                else {
+                    customerModel = new CustomerModel();
+                    Toast.makeText(EditCustomerDialogActivity.this, "Call API Error", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseObject> call, Throwable t) {
+                Toast.makeText(EditCustomerDialogActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
     private void openFileChooser() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent, PICK_IMAGE_REQUEST);
