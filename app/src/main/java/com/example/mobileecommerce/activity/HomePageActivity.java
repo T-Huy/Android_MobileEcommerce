@@ -53,9 +53,9 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
     NavigationView navigationView;
     private RecyclerView recyclerView2;
 
-    private String[] title2 = {"Home", "Cart", "My Orders", "Brands", "Offers", "My Account"};
+    private String[] title2 = {"Trang Chủ", "Giỏ Hàng", "Đơn Hàng", "Thương Hiệu", "Gợi Ý", "Thông Tin"};
 
-    private int[] image2 = {R.drawable.home_, R.drawable.cart_, R.drawable.order, R.drawable.category, R.drawable.offer, R.drawable.profile_};
+    private int[] image2 = {R.drawable.home_, R.drawable.cart_, R.drawable.shoppingbag, R.drawable.category, R.drawable.offer, R.drawable.profile_};
     private Toolbar toolbar;
     SharedPreferencesManager pres;
     ImageView ecart;

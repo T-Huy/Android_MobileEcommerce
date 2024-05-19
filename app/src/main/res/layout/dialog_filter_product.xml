@@ -31,7 +31,7 @@
             android:fontFamily="@font/lexend"
             android:text="Lọc giá"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
         <com.google.android.material.slider.RangeSlider
             android:id="@+id/slider_price"
@@ -53,7 +53,7 @@
             android:fontFamily="@font/lexend"
             android:text="Lọc pin"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
 
@@ -77,7 +77,7 @@
             android:fontFamily="@font/lexend"
             android:text="Lọc màn hình"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <com.google.android.material.slider.RangeSlider
@@ -106,6 +106,7 @@
                 android:layout_width="155dp"
                 android:layout_height="60dp"
                 android:backgroundTint="#000000"
+                android:fontFamily="@font/lexend"
                 android:text="Đặt lại " />
 
             <Button
@@ -114,6 +115,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="32dp"
                 android:backgroundTint="@color/black"
+                android:fontFamily="@font/lexend"
                 android:text="Lọc sản phẩm" />
         </LinearLayout>
 
@@ -124,6 +126,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:backgroundTint="@color/black"
+            android:fontFamily="@font/lexend"
             android:text="Thoát" />
     </LinearLayout>
 </LinearLayout>
