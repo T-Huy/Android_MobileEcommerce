@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg_white_corner_10_border_gray"
     tools:context=".activity.RegisterActivity">
 
     <TextView
+        android:id="@+id/signuptitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/signuptitle"
-        android:text="Sign up"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/lexend_exa"
         android:gravity="center"
-        android:layout_margin="20dp"/>
+        android:text="Sign up"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/username"
@@ -27,23 +28,23 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#30ffffff"
-        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+        android:background="@drawable/custom_edittext"
+        android:drawableLeft="@drawable/ic_successful"
         android:drawablePadding="20dp"
         android:hint="Username"
         android:padding="20dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/email"
         android:layout_below="@id/username"
-        android:background="#30ffffff"
+        android:background="@drawable/custom_edittext"
         android:hint="Email"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         android:layout_margin="10dp"
         android:padding="20dp"
         android:drawableLeft="@drawable/ic_baseline_email_24"
@@ -53,13 +54,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/password"
         android:layout_below="@id/email"
-        android:background="#30ffffff"
+        android:background="@drawable/custom_edittext"
         android:hint="Password"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         android:layout_margin="10dp"
         android:padding="20dp"
-        android:drawableLeft="@drawable/ic_baseline_info_24"
+        android:drawableLeft="@android:drawable/ic_partial_secure"
         android:drawablePadding="20dp"
         android:inputType="textPassword"/>
 
@@ -72,14 +73,14 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#30ffffff"
-        android:drawableLeft="@drawable/ic_baseline_info_24"
+        android:background="@drawable/custom_edittext"
+        android:drawableLeft="@android:drawable/ic_partial_secure"
         android:drawablePadding="20dp"
         android:hint="Re-Password"
         android:inputType="textPassword"
         android:padding="20dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
     <Spinner
         android:id="@+id/spinner_options_role"
@@ -90,7 +91,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#30ffffff"
+        android:background="@drawable/custom_edittext"
         android:drawableLeft="@drawable/ic_baseline_info_24"
         android:drawablePadding="20dp"
         android:hint="Re-Password"
@@ -109,41 +110,46 @@
         android:layout_marginTop="120dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
-        android:backgroundTint="@color/design_default_color_secondary"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/lexend_exa"
         android:text="REGISTER"
         android:textColor="@color/white"
         android:textSize="18dp" />
 
     <TextView
+        android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/info"
         android:layout_above="@id/socialicons"
-        android:text="or sign up with"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lexend_deca"
+        android:text="or sign up with" />
 
     <LinearLayout
+        android:id="@+id/socialicons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/socialicons"
+        android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:layout_alignParentBottom="true">
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_margin="20dp"
-            android:src="@drawable/google"/>
+            android:src="@drawable/google1" />
+
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_margin="20dp"
-            android:src="@drawable/fb"/>
+            android:src="@drawable/facebook" />
+
         <ImageView
             android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_height="match_parent"
             android:layout_margin="20dp"
-            android:src="@drawable/twitter"/>
+            android:src="@drawable/twitter1" />
     </LinearLayout>
 
 </RelativeLayout>

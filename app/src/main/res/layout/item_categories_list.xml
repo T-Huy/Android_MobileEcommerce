@@ -39,7 +39,7 @@
                     android:id="@+id/title_brand_products"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
+                    android:fontFamily="@font/lexend"
                     android:text="Vigo Atom + Personal Air conditioner, white color"
                     android:textColor="@color/txt_color"
                     android:textSize="15.3sp" />

@@ -13,8 +13,25 @@
                 android:src="@drawable/ac" />
 
             <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
-                <TextView android:textSize="13.3sp" android:textColor="@color/txt_color" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vigo Atom + Personal Air conditioner, white color" android:fontFamily="@font/roboto_medium"/>
-                <TextView android:id="@+id/sub_title" android:textSize="12sp" android:textColor="#8b8a8a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Mobile" android:fontFamily="@font/roboto_medium"/>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend"
+                    android:text="Vigo Atom + Personal Air conditioner, white color"
+                    android:textColor="@color/txt_color"
+                    android:textSize="13.3sp" />
+
+                <TextView
+                    android:id="@+id/sub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/lexend"
+                    android:text="Mobile"
+                    android:textColor="#8b8a8a"
+                    android:textSize="12sp" />
                 <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
                     <TextView android:textSize="12sp" android:textColor="#717171" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4.6" android:fontFamily="@font/roboto_regular"/>
                     <ImageView android:layout_gravity="center" android:layout_width="12dp" android:layout_height="12dp" android:layout_marginLeft="10dp" android:src="@drawable/ic_star_black_24dp"/>

@@ -10,8 +10,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include layout="@layout/toolbar_product_list" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,10 +20,15 @@
             android:background="@drawable/white_light_rect"
             android:orientation="vertical">
 
+            <include
+                layout="@layout/toolbar_product_list"
+                android:visibility="visible" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rc_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -48,8 +51,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Sub Total"
+                    android:fontFamily="@font/lexend"
+                    android:text="Tổng tiền"
                     android:textColor="#a2a2a2"
                     android:textSize="12.7sp" />
 
@@ -83,8 +86,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Shipping Charge"
+                    android:fontFamily="@font/lexend"
+                    android:text="Phí vận chuyển"
                     android:textColor="#a2a2a2"
                     android:textSize="12.7sp" />
 
@@ -92,7 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Free"
+                    android:text="Miễn phí"
                     android:textColor="#32cd32"
                     android:textSize="12.7sp" />
             </LinearLayout>
@@ -117,8 +120,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Coupan Discount"
+                    android:fontFamily="@font/lexend"
+                    android:text="Mã giảm giá"
                     android:textColor="#a2a2a2"
                     android:textSize="12.7sp" />
 
@@ -126,7 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Apply Coupan"
+                    android:text="Áp mã"
                     android:textColor="#32cd32"
                     android:textSize="12.7sp" />
             </LinearLayout>
@@ -153,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="Total"
+                    android:text="Tổng"
                     android:textColor="#a2a2a2"
                     android:textSize="12.7sp" />
 
