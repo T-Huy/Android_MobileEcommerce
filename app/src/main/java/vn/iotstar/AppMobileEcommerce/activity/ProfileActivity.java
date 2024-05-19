@@ -46,10 +46,6 @@ public class ProfileActivity extends AppCompatActivity {
     EditText edtPhone;
     EditText edtAddress;
 
-    EditText edtProvince;
-    EditText edtDistrict;
-    EditText edtSub_district;
-
     ImageView imgAvatar;
 
     Button btnLoadImage;
@@ -166,9 +162,6 @@ public class ProfileActivity extends AppCompatActivity {
         edtFullname = findViewById(R.id.edt_fullname);
         edtAddress = findViewById(R.id.edt_address);
         edtPhone = findViewById(R.id.edt_sodienthoai);
-        edtProvince = findViewById(R.id.edt_province);
-        edtDistrict = findViewById(R.id.edt_district);
-        edtSub_district = findViewById(R.id.edt_subdistrict);
         imgAvatar = findViewById(R.id.profileImage);
         btnLogout = findViewById(R.id.btn_logout_profile);
     }
@@ -185,9 +178,6 @@ public class ProfileActivity extends AppCompatActivity {
                     edtFullname.setText(customer.getFullname());
                     edtPhone.setText(customer.getPhonenumber());
                     edtAddress.setText(customer.getAddress());
-                    edtProvince.setText(customer.getProvince());
-                    edtDistrict.setText(customer.getDistrict());
-                    edtSub_district.setText(customer.getSubdistrict());
                 }
                 else {
                     customer = new CustomerModel();
@@ -228,9 +218,6 @@ public class ProfileActivity extends AppCompatActivity {
         customer.setUserName(tvUsername.getText().toString());
         customer.setFullname(edtFullname.getText().toString());
         customer.setPhonenumber(edtPhone.getText().toString());
-        customer.setProvince(edtProvince.getText().toString());
-        customer.setDistrict(edtDistrict.getText().toString());
-        customer.setSubdistrict(edtSub_district.getText().toString());
         customerAPI.updateCustomer(customer).enqueue(new Callback<ResponseObject>() {
             @Override
             public void onResponse(Call<ResponseObject> call, Response<ResponseObject> response) {
