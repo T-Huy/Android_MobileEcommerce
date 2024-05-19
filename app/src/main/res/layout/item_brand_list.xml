@@ -16,18 +16,17 @@
             android:layout_gravity="center"
             android:src="@mipmap/ic_launcher" />
     </FrameLayout>
-
     <TextView
-        android:id="@+id/title_brand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/lexend"
-        android:gravity="center"
-        android:text="Headphone"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        android:textStyle="bold" />
+            android:id="@+id/title_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Headphone"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="12sp" />
     <View android:layout_gravity="end" android:background="@color/view_line" android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignParentBottom="true"/>
 </LinearLayout>
 

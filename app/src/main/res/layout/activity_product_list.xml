@@ -34,9 +34,7 @@
                 android:fontFamily="@font/lexend"
                 android:text="Tìm kiếm"
                 android:textColor="@android:color/white"
-                android:backgroundTint="@color/black"
                 android:textSize="16sp" />
-
 
         </LinearLayout>
     </LinearLayout>

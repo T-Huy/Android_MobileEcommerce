@@ -1,49 +1,55 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <include layout="@layout/toolbar_product_list"/>
+    <!-- Brand -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <include layout="@layout/toolbar_product_list"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:padding="16dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp" />
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_gravity="center">
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center">
 
-                <Button
-                    android:id="@+id/btnAdd"
-                    android:layout_width="153dp"
-                    android:layout_height="52dp"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/black"
-                    android:backgroundTintMode="add"
-                    android:drawableStart="@drawable/add_product"
-                    android:text="Add"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/btnAdd"
+                        android:layout_width="153dp"
+                        android:layout_height="52dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/black"
+                        android:backgroundTintMode="add"
+                        android:text="Thêm"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
-    </LinearLayout>
-
-</ScrollView>
+    </ScrollView>
+</LinearLayout>

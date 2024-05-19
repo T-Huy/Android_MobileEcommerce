@@ -1,0 +1,233 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend"
+        android:gravity="center"
+        android:text="Thêm sản phẩm"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/edtProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lexend"
+                android:hint="Tên sản phẩm"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/edtOs"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000" />
+
+            <EditText
+                android:id="@+id/edtOs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lexend"
+                android:hint="Hệ điều hành"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/edtCpu"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000" />
+
+            <EditText
+                android:id="@+id/edtCpu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lexend"
+                android:hint="CPU"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/edtOrigin"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000" />
+
+            <EditText
+                android:id="@+id/edtOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lexend"
+                android:hint="Xuất xứ"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/edtBrand_ID"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000" />
+
+            <EditText
+                android:id="@+id/edtBrand_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lexend"
+                android:hint="Mã thương hiệu"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/edtDescription"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000" />
+
+            <EditText
+                android:id="@+id/edtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lexend"
+                android:hint="Mô tả"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/edtDescription"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000" />
+
+            <EditText
+                android:id="@+id/edtBattery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lexend"
+                android:hint="Thời lượng pin"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/edtScreen"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000" />
+
+            <EditText
+                android:id="@+id/edtScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lexend"
+                android:hint="Màn hình"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/edtPrice"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000" />
+
+            <EditText
+                android:id="@+id/edtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/lexend"
+                android:hint="Giá"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000" />
+
+            <ImageView
+                android:id="@+id/selected_image"
+                android:layout_width="200dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagepreview" />
+
+            <Button
+                android:id="@+id/btnSelect_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#EF6464"
+                android:drawableLeft="@drawable/icon_camera"
+                android:fontFamily="@font/lexend"
+                android:text="Chọn hình ảnh" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnSave_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#000000"
+                    android:drawableLeft="@drawable/ic_tick"
+                    android:fontFamily="@font/lexend"
+                    android:padding="8dp"
+                    android:text="Lưu"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnCancel_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:backgroundTint="#FF0000"
+                    android:fontFamily="@font/lexend"
+                    android:padding="8dp"
+                    android:text="Hủy"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

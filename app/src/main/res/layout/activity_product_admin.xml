@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/toolbar_product_list"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/white_home_rect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/search_icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/ic_search"/>
+        <EditText
+            android:textSize="15sp"
+            android:id="@+id/search_editext"
+            android:background="@color/transperent"
+            android:padding="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Searching..."
+            android:textColor="@color/txt_color"
+            android:inputType="text"
+            android:fontFamily="@font/roboto_regular"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_product_grid"
+        android:layout_width="match_parent"
+        android:layout_height="568dp"
+        android:background="@color/white"
+        android:clipToPadding="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="153dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/black"
+                android:backgroundTintMode="add"
+                android:text="Thêm"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

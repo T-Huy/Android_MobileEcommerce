@@ -38,11 +38,12 @@
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
 
-                        <ImageView
+                        <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/brand_manage"
                             android:layout_width="96dp"
                             android:layout_height="96dp"
-                            android:src="@drawable/social"
+                            android:background="#000000"
+                            android:src="@drawable/brand"
                             app:civ_border_color="@color/gray"
                             app:civ_border_width="2dp" />
 
@@ -73,10 +74,12 @@
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
 
-                        <ImageView
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/product_manage"
                             android:layout_width="96dp"
                             android:layout_height="96dp"
-                            android:src="@drawable/iphone"
+                            android:background="#000000"
+                            android:src="@drawable/product"
                             app:civ_border_color="@color/gray"
                             app:civ_border_width="2dp" />
 
@@ -107,10 +110,12 @@
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
 
-                        <ImageView
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/customer_manage"
                             android:layout_width="96dp"
                             android:layout_height="96dp"
-                            android:src="@drawable/customer"
+                            android:background="#000000"
+                            android:src="@drawable/rating"
                             app:civ_border_color="@color/gray"
                             app:civ_border_width="2dp" />
 
@@ -157,12 +162,13 @@
                         android:layout_width="300dp"
                         android:layout_height="30dp"
                         android:background="@drawable/cell_border"
-                        android:drawableLeft="@android:drawable/ic_menu_myplaces"
+                        android:backgroundTint="#000000"
+                        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
                         android:drawablePadding="10dp"
                         android:fontFamily="@font/lexend"
                         android:gravity="center_vertical|left"
                         android:text="Số lượng người dùng"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -173,7 +179,6 @@
                         android:layout_marginStart="1dp"
                         android:background="#142196F3"
                         android:backgroundTint="#FFFFFF"
-                        android:fontFamily="@font/lexend"
                         android:gravity="left"
                         android:text="1000"
                         android:textColor="@color/black"
@@ -189,12 +194,13 @@
                         android:layout_width="300dp"
                         android:layout_height="30dp"
                         android:background="@drawable/cell_border"
-                        android:drawableLeft="@android:drawable/ic_menu_add"
+                        android:backgroundTint="#000000"
+                        android:drawableLeft="@drawable/ic_baseline_info_24"
                         android:drawablePadding="10dp"
                         android:fontFamily="@font/lexend"
                         android:gravity="center_vertical|left"
                         android:text="Số lượng sản phẩm"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -205,7 +211,6 @@
                         android:layout_marginStart="1dp"
                         android:background="#16F44336"
                         android:backgroundTint="#FFFFFF"
-                        android:fontFamily="@font/lexend"
                         android:text="500"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
@@ -220,12 +225,13 @@
                         android:layout_width="300dp"
                         android:layout_height="30dp"
                         android:background="@drawable/cell_border"
-                        android:drawableLeft="@android:drawable/ic_menu_info_details"
+                        android:backgroundTint="#000000"
+                        android:drawableLeft="@drawable/ic_baseline_info_24"
                         android:drawablePadding="10dp"
                         android:fontFamily="@font/lexend"
                         android:gravity="center_vertical|left"
                         android:text="Tổng doanh thu"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -236,7 +242,6 @@
                         android:layout_marginStart="1dp"
                         android:background="#258BC34A"
                         android:backgroundTint="#FFFFFF"
-                        android:fontFamily="@font/lexend"
                         android:text="$10,000"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
@@ -251,12 +256,13 @@
                         android:layout_width="300dp"
                         android:layout_height="30dp"
                         android:background="@drawable/cell_border"
-                        android:drawableLeft="@android:drawable/ic_menu_mylocation"
+                        android:backgroundTint="#000000"
+                        android:drawableLeft="@drawable/ic_baseline_email_24"
                         android:drawablePadding="10dp"
                         android:fontFamily="@font/lexend"
                         android:gravity="center_vertical|left"
                         android:text="Số lượng đánh giá"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -267,7 +273,6 @@
                         android:layout_marginStart="1dp"
                         android:background="#20CDDC39"
                         android:backgroundTint="#FFFFFF"
-                        android:fontFamily="@font/lexend"
                         android:text="100"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
@@ -277,14 +282,12 @@
             </TableLayout>
 
             <!-- Bar Chart -->
-
-            <!-- Pie Chart -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="16dp"
-                android:orientation="vertical">
+                android:layout_marginBottom="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -299,10 +302,12 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/bar_chart_recyclerview"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
 
             </LinearLayout>
 
+            <!-- Pie Chart -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

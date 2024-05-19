@@ -11,13 +11,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
-        android:fontFamily="@font/lexend"
-        android:gravity="center"
         android:padding="12dp"
-        android:text="Lọc sản phẩm"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="@drawable/bg_yellow_corner_16_top_left_top_right"
+        android:text="Filter Product" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,11 +27,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/lexend"
-            android:text="Lọc giá"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="24sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:text="Filter Price" />
         <com.google.android.material.slider.RangeSlider
             android:id="@+id/slider_price"
             android:layout_width="300dp"
@@ -41,20 +39,15 @@
             android:valueFrom="0"
             android:valueTo="3000"
             app:values="@array/rangeSlider"
-            app:thumbColor="@color/black"
-            app:thumbStrokeColor="@color/black"
-            app:trackColorActive="@color/black"
-            app:trackColorInactive="@color/black"
             tools:ignore="SpeakableTextPresentCheck"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/lexend"
-            android:text="Lọc pin"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="24sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:text="Filter Battery" />
 
 
         <com.google.android.material.slider.RangeSlider
@@ -65,68 +58,52 @@
             android:valueFrom="2000"
             android:valueTo="6000"
             app:values="@array/rangeBattery"
-            app:thumbColor="@color/black"
-            app:thumbStrokeColor="@color/black"
-            app:trackColorActive="@color/black"
-            app:trackColorInactive="@color/black"
             tools:ignore="SpeakableTextPresentCheck"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/lexend"
-            android:text="Lọc màn hình"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="24sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:text="Filter Screen" />
 
         <com.google.android.material.slider.RangeSlider
             android:id="@+id/slider_screen"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:backgroundTint="@color/black"
+            android:layout_height="wrap_content"
             android:valueFrom="0"
             android:valueTo="8"
             app:values="@array/rangeScreen"
-            app:thumbColor="@color/black"
-            app:thumbStrokeColor="@color/black"
-            app:trackColorActive="@color/black"
-            app:trackColorInactive="@color/black"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="16dp">
-
             <Button
                 android:id="@+id/btnReset"
                 android:layout_width="155dp"
                 android:layout_height="60dp"
-                android:backgroundTint="#000000"
-                android:fontFamily="@font/lexend"
-                android:text="Đặt lại " />
+                android:text="Reset Filter" />
 
             <Button
                 android:id="@+id/btnFilter"
                 android:layout_width="160dp"
                 android:layout_height="60dp"
-                android:layout_marginLeft="32dp"
-                android:backgroundTint="@color/black"
-                android:fontFamily="@font/lexend"
-                android:text="Lọc sản phẩm" />
+                android:text="Filter Product"
+                android:layout_marginLeft="32dp"/>
         </LinearLayout>
 
         <Button
             android:id="@+id/btnThoatFilter"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:backgroundTint="@color/black"
-            android:fontFamily="@font/lexend"
-            android:text="Thoát" />
+            android:text="Exit" />
     </LinearLayout>
 </LinearLayout>
