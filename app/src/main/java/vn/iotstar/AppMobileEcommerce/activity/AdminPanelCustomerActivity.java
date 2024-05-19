@@ -66,10 +66,10 @@ public class AdminPanelCustomerActivity extends AppCompatActivity {
         });
 
         userModels = new ArrayList<>();
-        mAdapter2 = new AdminRecycleAdapterUserList(userModels, AdminPanelCustomerActivity.this);
-        recyclerview.setLayoutManager(new LinearLayoutManager(this));
-        recyclerview.setItemAnimator(new DefaultItemAnimator());
-        recyclerview.setAdapter(mAdapter2);
+//        mAdapter2 = new AdminRecycleAdapterUserList(userModels, AdminPanelCustomerActivity.this);
+//        recyclerview.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerview.setItemAnimator(new DefaultItemAnimator());
+//        recyclerview.setAdapter(mAdapter2);
 
         GetUser();
     }

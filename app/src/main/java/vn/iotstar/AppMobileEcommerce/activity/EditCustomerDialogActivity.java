@@ -49,6 +49,7 @@ public class EditCustomerDialogActivity extends AppCompatActivity {
     private Uri mUri;
     private String user_name;
     private String email;
+    private String role;
     private static final int REQUEST_CODE_READ_EXTERNAL_STORAGE = 9;
     private static final int PICK_IMAGE_REQUEST = 10;
     private CustomerAPI customerAPI = RetrofitClient.getRetrofit().create(CustomerAPI.class);
@@ -85,9 +86,13 @@ public class EditCustomerDialogActivity extends AppCompatActivity {
         Intent intent = getIntent();
         user_name = intent.getStringExtra("user_name");
         email = intent.getStringExtra("email");
+        role = intent.getStringExtra("role");
 
         Toast.makeText(EditCustomerDialogActivity.this, user_name, Toast.LENGTH_SHORT).show();
-        GetCustmerInforAPI();
+
+            GetCustmerInforAPI();
+
+
 
         btnSaveCustomer.setOnClickListener(new View.OnClickListener() {
             @Override

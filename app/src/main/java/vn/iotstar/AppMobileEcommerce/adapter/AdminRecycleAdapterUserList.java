@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +24,7 @@ public class AdminRecycleAdapterUserList extends RecyclerView.Adapter<AdminRecyc
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView userName;
         public TextView userEmail;
+
 
         public MyViewHolder(@NonNull View v) {
             super(v);
@@ -45,18 +47,26 @@ public class AdminRecycleAdapterUserList extends RecyclerView.Adapter<AdminRecyc
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         UserModel user = users.get(position);
-        holder.userName.setText(user.getUserName());
-        holder.userEmail.setText(user.getEmail());
+        if(user.getRole().equals("ROLE_USER"))
+        {
+            holder.userName.setText(user.getUserName());
+            holder.userEmail.setText(user.getEmail());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(context, EditCustomerDialogActivity.class);
-                intent.putExtra("user_name", user.getUserName());
-                intent.putExtra("email", user.getEmail());
-                context.startActivity(intent);
-            }
-        });
+            holder.itemView.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    Intent intent = new Intent(context, EditCustomerDialogActivity.class);
+                    intent.putExtra("user_name", user.getUserName());
+                    intent.putExtra("email", user.getEmail());
+                    context.startActivity(intent);
+                }
+            });
+        }
+        else {
+            // Nếu tên người dùng trùng với tên muốn ẩn, ẩn itemView
+//            users.remove(position);
+//            notifyItemRemoved(position);
+        }
     }
 
     @Override
