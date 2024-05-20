@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -55,6 +56,8 @@ public class ProductDetailActivity extends AppCompatActivity {
     List<ReviewModel> listReview;
     ViewPagerAdapter mViewPagerAdapter;
     private String username;
+    ImageView favorite;
+    LinearLayout rating_layout;
 
     SharedPreferencesManager pres;
     @Override
@@ -238,5 +241,10 @@ public class ProductDetailActivity extends AppCompatActivity {
         rcvReview = findViewById(R.id.recyclerview_review);
 //        btnAddReview = findViewById(R.id.btn_add_review);
         ratingBar = findViewById(R.id.ratingbar);
+        rating_layout = (LinearLayout) findViewById(R.id.rating_layout);
+        favorite = (ImageView) findViewById(R.id.favorite);
+//        addToCart.setVisibility(View.VISIBLE);
+//        rating_layout.setVisibility(View.VISIBLE);
+//        favorite.setVisibility(View.VISIBLE);
     }
 }

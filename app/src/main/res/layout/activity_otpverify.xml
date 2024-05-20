@@ -215,7 +215,7 @@
                 android:layout_margin="30dp"
                 android:background="#000000"
                 android:backgroundTint="#000000"
-                android:text="Verify"
+                android:text="Xác minh"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 

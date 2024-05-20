@@ -24,6 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import vn.iotstar.AppMobileEcommerce.R;
+import vn.iotstar.AppMobileEcommerce.adapter.AdminRecycleAdapterProductGrid;
 import vn.iotstar.AppMobileEcommerce.adapter.RecycleAdapterProductGrid;
 import vn.iotstar.AppMobileEcommerce.api.ProductAPI;
 import vn.iotstar.AppMobileEcommerce.model.ProductGridModel;
@@ -31,7 +32,7 @@ import vn.iotstar.AppMobileEcommerce.retrofit.RetrofitClient;
 
 public class AdminProductGridActivity extends AppCompatActivity {
     private List<ProductGridModel> productGridModelList;
-    private RecycleAdapterProductGrid mAdapter2;
+    private AdminRecycleAdapterProductGrid mAdapter2;
     private RecyclerView recyclerview;
     ImageView iv_back;
     TextView title;
@@ -111,7 +112,7 @@ public class AdminProductGridActivity extends AppCompatActivity {
             public void onResponse(Call<List<ProductGridModel>> call, Response<List<ProductGridModel>> response) {
                 if(response.isSuccessful()){
                     productGridModelList = response.body();
-                    mAdapter2 = new RecycleAdapterProductGrid(productGridModelList, AdminProductGridActivity.this);
+                    mAdapter2 = new AdminRecycleAdapterProductGrid(productGridModelList, AdminProductGridActivity.this);
                     recyclerview.setLayoutManager(new GridLayoutManager(AdminProductGridActivity.this, 2));
                     recyclerview.setItemAnimator(new DefaultItemAnimator());
                     recyclerview.setAdapter(mAdapter2);

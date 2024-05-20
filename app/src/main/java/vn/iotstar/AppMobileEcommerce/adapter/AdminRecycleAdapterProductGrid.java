@@ -13,33 +13,32 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import vn.iotstar.AppMobileEcommerce.R;
-import vn.iotstar.AppMobileEcommerce.activity.AdminProductDetailActivity;
-import vn.iotstar.AppMobileEcommerce.activity.ProductDetailActivity;
-import vn.iotstar.AppMobileEcommerce.model.ProductGridModel;
 
 import java.util.List;
 
-/* loaded from: classes.dex */
-public class RecycleAdapterProductGrid extends RecyclerView.Adapter<RecycleAdapterProductGrid.MyViewHolder> {
+import vn.iotstar.AppMobileEcommerce.R;
+import vn.iotstar.AppMobileEcommerce.activity.AdminProductDetailActivity;
+import vn.iotstar.AppMobileEcommerce.model.ProductGridModel;
+
+public class AdminRecycleAdapterProductGrid extends RecyclerView.Adapter<AdminRecycleAdapterProductGrid.MyViewHolder> {
     private List<ProductGridModel> productList;
     private Context context;
 
-    public RecycleAdapterProductGrid(List<ProductGridModel> productList, Context context) {
+    public AdminRecycleAdapterProductGrid(List<ProductGridModel> productList, Context context) {
         this.productList = productList;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AdminRecycleAdapterProductGrid.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_product_grid_list,
                 parent, false);
-        return new MyViewHolder(view);
+        return new AdminRecycleAdapterProductGrid.MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AdminRecycleAdapterProductGrid.MyViewHolder holder, int position) {
         int id = position;
         ProductGridModel product = productList.get(id);
         holder.title.setText(product.getProductName());
@@ -51,7 +50,7 @@ public class RecycleAdapterProductGrid extends RecyclerView.Adapter<RecycleAdapt
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(holder.itemView.getContext(), ProductDetailActivity.class);
+                Intent intent = new Intent(holder.itemView.getContext(), AdminProductDetailActivity.class);
                 intent.putExtra("product", productList.get(id));
                 holder.itemView.getContext().startActivity(intent);
             }

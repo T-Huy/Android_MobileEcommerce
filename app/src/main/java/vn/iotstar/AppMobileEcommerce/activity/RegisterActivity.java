@@ -40,7 +40,8 @@ public class RegisterActivity extends AppCompatActivity {
         MaterialButton regbtn = (MaterialButton) findViewById(R.id.signupbtn);
 
         Spinner spinnerOptions = findViewById(R.id.spinner_options_role);
-        String[] options = {"ROLE_USER", "ROLE_MANAGER", "ROLE_SHIPPER"};
+        //String[] options = {"ROLE_USER", "ROLE_MANAGER", "ROLE_SHIPPER"};
+        String[] options = {"ROLE_USER"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, options);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerOptions.setAdapter(adapter);

@@ -78,6 +78,7 @@ public class AdminPanelHomeActivity extends AppCompatActivity {
         customerImageView = (ImageView) findViewById((R.id.customer_manage));
 
         this.title.setText("Dashboard Home");
+
         brandImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

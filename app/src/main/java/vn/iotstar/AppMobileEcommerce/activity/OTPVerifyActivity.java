@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -36,6 +38,13 @@ public class OTPVerifyActivity extends AppCompatActivity {
         EditText inputOTP4 = (EditText) findViewById(R.id.inputotp4);
         EditText inputOTP5 = (EditText) findViewById(R.id.inputotp5);
         EditText inputOTP6 = (EditText) findViewById(R.id.inputotp6);
+
+        inputOTP1.addTextChangedListener(new OtpTextWatcher(inputOTP1, inputOTP2));
+        inputOTP2.addTextChangedListener(new OtpTextWatcher(inputOTP2, inputOTP3));
+        inputOTP3.addTextChangedListener(new OtpTextWatcher(inputOTP3, inputOTP4));
+        inputOTP4.addTextChangedListener(new OtpTextWatcher(inputOTP4, inputOTP5));
+        inputOTP5.addTextChangedListener(new OtpTextWatcher(inputOTP5, inputOTP6));
+        inputOTP6.addTextChangedListener(new OtpTextWatcher(inputOTP6, null));
 
         Button verifyOTP = (Button) findViewById(R.id.btnsubmit);
         TextView re_SendOTP = (TextView) findViewById(R.id.sendotp_again);
@@ -131,5 +140,27 @@ public class OTPVerifyActivity extends AppCompatActivity {
             return true;
         }
         return false;
+    }
+    private class OtpTextWatcher implements TextWatcher {
+        private final EditText currentView;
+        private final EditText nextView;
+
+        public OtpTextWatcher(EditText currentView, EditText nextView) {
+            this.currentView = currentView;
+            this.nextView = nextView;
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            if (s.length() == 1 && nextView != null) {
+                nextView.requestFocus();
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {}
     }
 }
