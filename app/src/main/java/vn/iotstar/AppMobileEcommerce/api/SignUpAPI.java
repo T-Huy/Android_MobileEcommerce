@@ -12,6 +12,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface SignUpAPI {
+
     @POST("api/user/SignUp")
     Call<ResponseDTO> SignUp(@Body UserModel userModel);
 

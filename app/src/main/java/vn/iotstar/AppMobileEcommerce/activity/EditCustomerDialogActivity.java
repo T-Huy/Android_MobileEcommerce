@@ -88,7 +88,7 @@ public class EditCustomerDialogActivity extends AppCompatActivity {
         email = intent.getStringExtra("email");
         role = intent.getStringExtra("role");
 
-        Toast.makeText(EditCustomerDialogActivity.this, user_name, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(EditCustomerDialogActivity.this, user_name, Toast.LENGTH_SHORT).show();
 
             GetCustmerInforAPI();
 
