@@ -26,6 +26,7 @@ public interface ProductAPI {
 
     @GET("api/product/{brandId}")
     Call<List<ProductGridModel>> getProductByBrand(@Path("brandId") Integer brandId);
+
     @GET("api/product")
     Call<List<ProductGridModel>> getAllProduct();
 
@@ -42,7 +43,6 @@ public interface ProductAPI {
 
     @GET("api/product/get")
     Call<ProductGridModel> getProduct(@Query("id") Integer id);
-
 
     @POST("api/product/{id}")
     Call<ResponseObject> insert(@Body ProductGridModel productGridModel, @Part("brandId") Integer brandId);

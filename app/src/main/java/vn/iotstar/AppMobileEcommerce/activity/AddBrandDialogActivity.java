@@ -62,7 +62,7 @@ public class AddBrandDialogActivity extends AppCompatActivity {
             }
         });
 
-        edtBrandName = findViewById(R.id.fullname);
+        edtBrandName = findViewById(R.id.edtName_);
 
         btnCancel = findViewById(R.id.btnCancel_);
         btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -109,9 +109,12 @@ public class AddBrandDialogActivity extends AppCompatActivity {
             return;
         }
 
-        RequestBody brandName = RequestBody.create(MediaType.parse("multipart/form-data"), edtBrandName.getText().toString().trim());
+        //RequestBody brandName = RequestBody.create(MediaType.parse("multipart/form-data"), edtBrandName.getText().toString().trim());
+        RequestBody brandName = RequestBody.create(edtBrandName.getText().toString().trim(), MediaType.parse("multipart/form-data"));
         File file = new File(RealPathUtil.getRealPath(this, imgUrl));
-        RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
+        //RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
+        RequestBody requestFile = RequestBody.create(file, MediaType.parse("multipart/form-data"));
+
         MultipartBody.Part image = MultipartBody.Part.createFormData("images", file.getName(), requestFile);
 
         Call<ResponseObject> call = brandAPI.insert(brandName, image);
@@ -159,7 +162,7 @@ public class AddBrandDialogActivity extends AppCompatActivity {
                     // Quyền được cấp, thực hiện các hành động tương ứng
                 } else {
                     // Quyền không được cấp, thông báo cho người dùng biết
-                    Toast.makeText(this, "Read external storage permission denied", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this, "Read external storage permission denied", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }

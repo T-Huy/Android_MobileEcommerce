@@ -1,6 +1,7 @@
 package vn.iotstar.AppMobileEcommerce.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import vn.iotstar.AppMobileEcommerce.sharedpreferences.SharedPreferencesManager;
 
 public class EditBrandDialogActivity extends AppCompatActivity {
     private BrandsModel brand;
@@ -48,6 +50,9 @@ public class EditBrandDialogActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_READ_EXTERNAL_STORAGE = 9;
     private static final int PICK_IMAGE_REQUEST = 10;
     private BrandAPI brandAPI;
+
+    static android.content.SharedPreferences pres;
+    SharedPreferencesManager SharedPreferences = SharedPreferencesManager.getInstance(pres);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +75,7 @@ public class EditBrandDialogActivity extends AppCompatActivity {
 
         title_ = findViewById(R.id.dialog_title);
         oldBrandName = findViewById(R.id.user_name);
-        edtBrandName = findViewById(R.id.fullname);
+        edtBrandName = findViewById(R.id.edtName_);
         btnSaveBrand = findViewById(R.id.btnSave_);
         btnCancel = findViewById(R.id.btnCancel_);
         title_.setText("Edit a Brand");
@@ -127,7 +132,8 @@ public class EditBrandDialogActivity extends AppCompatActivity {
         MultipartBody.Part image = null;
         if (imgUrl != null) {
             File file = new File(RealPathUtil.getRealPath(this, imgUrl));
-            RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
+            //RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
+            RequestBody requestFile = RequestBody.create(file, MediaType.parse("multipart/form-data"));
             image = MultipartBody.Part.createFormData("images", file.getName(), requestFile);
             Log.e("images", image.toString());
         }
@@ -179,7 +185,7 @@ public class EditBrandDialogActivity extends AppCompatActivity {
                     // Quyền được cấp, thực hiện các hành động tương ứng
                 } else {
                     // Quyền không được cấp, thông báo cho người dùng biết
-                    Toast.makeText(this, "Read external storage permission denied", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this, "Read external storage permission denied", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }

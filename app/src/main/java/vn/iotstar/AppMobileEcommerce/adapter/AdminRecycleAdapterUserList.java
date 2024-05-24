@@ -47,8 +47,8 @@ public class AdminRecycleAdapterUserList extends RecyclerView.Adapter<AdminRecyc
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         UserModel user = users.get(position);
-        if(user.getRole().equals("ROLE_USER"))
-        {
+//        if(user.getRole().equals("ROLE_USER"))
+//        {
             holder.userName.setText(user.getUserName());
             holder.userEmail.setText(user.getEmail());
 
@@ -61,12 +61,12 @@ public class AdminRecycleAdapterUserList extends RecyclerView.Adapter<AdminRecyc
                     context.startActivity(intent);
                 }
             });
-        }
-        else {
+//        }
+//        else {
             // Nếu tên người dùng trùng với tên muốn ẩn, ẩn itemView
 //            users.remove(position);
 //            notifyItemRemoved(position);
-        }
+//        }
     }
 
     @Override
